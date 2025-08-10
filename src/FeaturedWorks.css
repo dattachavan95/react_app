@@ -1,0 +1,8 @@
+.featured-img {
+  max-height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+.badge{
+    color:#fff;
+}
