@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./BlogList.css";
-
+import Navbar from "./Navbar";
 const blogPosts = [
   {
     id: 1,
@@ -10,7 +10,7 @@ const blogPosts = [
     date: "12 Feb 2019",
     tags: ["Express", "Handlebars"],
     description:
-      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint..."
+      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const blogPosts = [
     date: "12 Feb 2019",
     tags: ["Express", "Handlebars"],
     description:
-      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint..."
+      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const blogPosts = [
     date: "12 Feb 2019",
     tags: ["Express", "Handlebars"],
     description:
-      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint..."
+      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
   },
   {
     id: 4,
@@ -34,18 +34,20 @@ const blogPosts = [
     date: "12 Feb 2019",
     tags: ["Express", "Handlebars"],
     description:
-      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint..."
+      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
   }
 ];
 
-const BlogList = (props) => {
+const BlogList = () => {
   return (
-    <div className="container mt-5 blog-list">
+   <div className="container"> 
+    <Navbar></Navbar>  
+    <div className="container w-50  mt-5 blog-list">
       <h2 className="fw-bold mb-4 blog-title">
-        <span className="text-primary">Blog</span>
+        <span className="">Blog</span>
       </h2>
       {blogPosts.map((post) => (
-        <div key={post.id} className="blog-item py-4 border-bottom">
+        <div key={post.id} className="blog-item p-4 border-bottom">
           <Link to={`/blog/${post.id}`} className="text-decoration-none">
             <h4 className="fw-semibold text-dark">{post.title}</h4>
           </Link>
@@ -65,6 +67,7 @@ const BlogList = (props) => {
         </div>
       ))}
     </div>
+    </div>  
   );
 };
 

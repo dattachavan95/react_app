@@ -1,11 +1,13 @@
 import React from 'react'
 import { Link } from "react-router-dom"
 import profileImg from './Profileimg.jpg'
-import BlogList from './BlogList/BlogList' ;
+import BlogList from './BlogList';
 import FeaturedWorks from './FeaturedWorks';
 import Img2 from './Img2.png';
 import Img3 from './Img3.png';
 import Img1 from './Img1.png';
+import Navbar from './Navbar';
+
 
 
 
@@ -13,26 +15,10 @@ const Profile = (props) => {
     return (
         <div className="container">
             {/* Navbar */}
-            <nav className="navbar navbar-expand-lg ">
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul className="navbar-nav">
-                        <li className="nav-item active">
-                            <a className="nav-link" href="#">Work</a>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/BlogList">
-                                Blog
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+            <Navbar>
+                
+            </Navbar>
+           
 
             {/* Hero Section */}
             <div className="row p-5 align-items-center">
@@ -80,28 +66,8 @@ const Profile = (props) => {
                 </div>
             </div>
             <div className="container py-5">
-                <h4 className="fw-bold mb-4">Featured works</h4>
-                <FeaturedWorks year='2020'
-                    title='Designing Dashboards'
-                    category='Dashboard'
-                    description=
-                    'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.'
-                    image={Img1}
-                />
-                <FeaturedWorks year='2020'
-                    title=' Vibrant Portraits of 2020'
-                    category='Illustration'
-                    description=
-                    'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.'
-                    image={Img2}
-                />
-                <FeaturedWorks year='2018'
-                    title='36 Days of Malayalam type'
-                    category='Typography'
-                    description=
-                    'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.'
-                    image={Img3}
-                />
+                
+                <FeaturedWorks />
             </div>
         </div>
 

@@ -1,23 +1,27 @@
 //import Card from './Card'
 import Profile from './Profile';
 import './App.css';
-import BlogList from "./BlogList/BlogList"; 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import WorkDetails from './WorkDetails'
+import BlogList from "./BlogList";
+import { Routes, Route } from "react-router-dom";
+import FeaturedWorks from './FeaturedWorks';
 
 
 
 function App() {
   return (
-   <Router>
-     
-      <Routes>
-       
-        <Route path="/" element={<Profile />} />
-        <Route path="/blog" element={<BlogList />} />
+    <Routes>
 
-        
-      </Routes>
-    </Router>
+
+
+      <Route path="/" element={<Profile />} />
+      <Route path="/blog" element={<BlogList />} />
+      <Route path="/work" element={< FeaturedWorks/>} />
+      <Route path="/contact" element={<WorkDetails />} />
+
+
+
+    </Routes>
   );
 }
 
